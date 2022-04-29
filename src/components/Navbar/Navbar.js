@@ -1,5 +1,5 @@
 export default function Navbar () {
-
+    // Estilo del header
     const headerStyles = {
         backgroundColor: "var(--verdeLogo)",
         color: "var(--colorGeneral)",
@@ -11,6 +11,7 @@ export default function Navbar () {
     }
     
     return ( 
+        // Aplico el estilo.
         <header style={headerStyles}>
             <div>
                 <nav>
@@ -20,7 +21,7 @@ export default function Navbar () {
                         </li>
                         <li>
                             Market
-                            
+                            {/* Submenú */}
                             <ul >
                                 <li>
                                     Frutas y Vegetales
