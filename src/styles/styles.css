@@ -1,0 +1,46 @@
+/* Regla vínculo a fuente de Google. */
+@import url('https://fonts.googleapis.com/css2?family=Klee+One:wght@600&display=swap');
+
+/* Reseteo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+/* Variables de color. */
+:root {
+    --colorGeneral: rgb(245, 245, 245);
+    --verdeLogo: rgb(1, 29, 1);
+    --backParrafos: rgba(88, 88, 62, 0.651);
+}  
+
+/* Etiqueta que modifica las listas en general. */
+li {
+    font-family: "Klee One", cursive; 
+    display: inline-block;
+    width: 8rem;
+    position: relative;
+    font-size: 1.3rem;
+} 
+
+/* Sub menú desplegable. */
+ul {
+    list-style: none;
+    font-size:0
+}
+ul ul {
+    position: absolute;
+    display: none;
+    background-color: var(--verdeLogo);
+    box-shadow: rgb(0 0 0 / 50%) 1px 10px 10px;
+} 
+ul ul li {
+    display: block;
+}
+ul li:hover ul {
+    display: block;
+    color: var(--colorGeneral); 
+}
