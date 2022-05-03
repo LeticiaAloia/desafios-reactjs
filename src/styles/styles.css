@@ -15,6 +15,7 @@
     --colorGeneral: rgb(245, 245, 245);
     --verdeLogo: rgb(1, 29, 1);
     --backParrafos: rgba(88, 88, 62, 0.651);
+    --fondoTarjetas: rgb(83, 77, 43);
 }  
 
 /* Etiqueta que modifica las listas en general. */
@@ -43,4 +44,8 @@ ul ul li {
 ul li:hover ul {
     display: block;
     color: var(--colorGeneral); 
+}
+
+.cart-icon {
+    color: var(--colorGeneral);
 }

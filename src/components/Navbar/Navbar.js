@@ -1,3 +1,6 @@
+// Importo el componente del icono.
+import CartIcon from "../CartIcon/CartIcon"
+
 export default function Navbar () {
     // Estilo del header
     const headerStyles = {
@@ -48,6 +51,11 @@ export default function Navbar () {
                         </li>
                     </ul>
                     </nav>
+            </div>
+            {/* Div para el icono. */}
+            <div className="cart-icon">
+                {/* Propiedad para el contador. */}
+                <CartIcon counter={4} />
             </div>
         </header> 
     );
