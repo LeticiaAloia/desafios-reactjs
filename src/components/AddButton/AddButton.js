@@ -2,6 +2,7 @@ import React from "react"
 // Toastify.
 import {toast} from "react-toastify"
 
+// Declaración del componente funcional.
 export default function AddButton() {
     // Estilo del botón.
     const addButtonStyles = {
@@ -15,6 +16,7 @@ export default function AddButton() {
     // Declaración del state hook.
     const [count, setCount] = React.useState(1)
     
+    // Variable para asentar un stock.
     const stock = 10
 
     // Función para aumentar cantidad, hasta completar el stock.
@@ -54,12 +56,18 @@ export default function AddButton() {
         
     }
 
+    // Return de la función.
     return (
         <div className="add-button-container">
+            {/* Aplico estilo. */}
             <button style={addButtonStyles} >
+                {/* Botón disminuir. */}
                 <StockButton text="-" handleOnClick={onDecrease} style={addButtonStyles} />
+                {/* Contador. */}
                 <span className="add-button-count" style={addButtonStyles}>{count}</span>
+                {/* Botón aumentar. */}
                 <StockButton text="+" handleOnClick={onAdd} style={addButtonStyles} />
+                {/* Botón agregar. */}
                 <AddButton style={addButtonStyles} handleOnSubmit={onSubmit} />
             </button>
             
