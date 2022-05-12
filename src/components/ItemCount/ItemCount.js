@@ -3,7 +3,7 @@ import React from "react"
 import {toast} from "react-toastify"
 
 // Declaración del componente funcional.
-export default function AddButton() {
+export default function Item () {
     // Estilo del botón.
     const addButtonStyles = {
         backgroundColor: "var(--verdeLogo)",
