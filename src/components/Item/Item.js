@@ -1,6 +1,8 @@
 import React from 'react'
 // Componentes que importo de Bootstrap.
 import {Card, Button} from 'react-bootstrap'
+// Item count. 
+import ItemCount from '../ItemCount/ItemCount'
 
 // Componente funcional con product como parámetro.
 const Item = ({product}) => {
@@ -15,6 +17,7 @@ return(
             ${product.price} por 250g
             </Card.Text>
         <Button style={{color:'black'}}>Ver más</Button>
+        {ItemCount}
         </Card.Body>
         </Card>
     </div>
