@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react"
-// Importo componente.
+// Importo componentes.
 import ItemList from "../ItemList/ItemList"
 // Falsa api.
 import { getProducts } from "../../mocks/FakeApi"
+
 
 
 // En la función paso la propiedad greeting como parámetro.

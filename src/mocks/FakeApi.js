@@ -5,6 +5,7 @@ const products = [
         name: "Avellanas",
         stock: 10,
         price: 350,
+        detail: "Avellanas orgánicas. Origen: patagonia argentina. Producto disponible todo el año.",
         image: "images/avellana.webp"
     },
     {
@@ -12,13 +13,15 @@ const products = [
         name: "Nueces",
         stock: 15,
         price: 470,
+        detail: "Nueces orgánicas. Origen: patagonia argentina. Producto disponible todo el año.",
         image: "images/nuez.webp"
     },
     {
         id: 1,
         name: "Pecan",
         stock: 10,
-        price: 450,
+        price: 650,
+        detail: "Nueces pecanas orgánicas. Origen: California, USA. Producto disponible todo el año.",
         image: "images/pecan.webp"
     },
     {
@@ -26,6 +29,7 @@ const products = [
         name: "Almendras",
         stock: 10,
         price: 380,
+        detail: "Almendras orgánicas. Origen: patagonia argentina. Producto disponible todo el año.",
         image: "images/almendra.webp"
     },
 ]
