@@ -30,7 +30,7 @@ export default function ItemListContainer ({greeting}) {
     return (
         // aplico el estilo.
         <div style={itemListContainerStyles}>
-            {/* Llamo a la propiedad. */}
+            
             <h1>Bienvenido... {greeting}</h1>
 
             <ItemList listaProductos={listaProductos}/>

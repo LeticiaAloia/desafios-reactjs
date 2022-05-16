@@ -2,18 +2,21 @@ import React from 'react'
 // Componentes que importo de Bootstrap.
 import {Card, Button} from 'react-bootstrap'
 
-export default function ItemDetail({product}) {
-    <div>
-        {/* Card de Bootstrap. Inserto las propiedades de los objetos de mi array de productos como props.  */}
-        <Card style={{ width: '18rem', color:'black'}}>
-        <Card.Img variant="top" src={product.image} alt={product.name} />
-        <Card.Body>
-            <Card.Title>{product.name}</Card.Title>
-            <Card.Text>
-            ${product.price} por 250g
-            </Card.Text>
-        <Button style={{color:'black'}}>Ver más</Button>
-        </Card.Body>
-        </Card>
-    </div>
+export default function ItemDetail ({nuez}) {
+
+    return(
+        <div>
+            <Card style={{ width: '18rem' }}>
+                <Card.Img variant="top" src={nuez.foto} />
+                <Card.Body>
+                    <Card.Title>{nuez.nombre}</Card.Title>
+                    <Card.Text>
+                    <p>Precio: ${nuez.precio}</p>
+                    <p>{nuez.descripcion}</p>
+                    </Card.Text>
+                    <Button>Comprar</Button>
+                </Card.Body>
+            </Card>
+        </div>
+    )
 }

@@ -12,6 +12,7 @@ const ItemList = ({listaProductos}) => {
         {/* Mapeo mi array de objetos product con la id como clave. */}
         {listaProductos.map((product) => < Item product={product} key={product.id} />)}
         </div>
+        
         </>
     )
 }
