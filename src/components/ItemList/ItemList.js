@@ -3,7 +3,7 @@ import React from 'react'
 import Item from '../Item/Item'
 
 const ItemList = ({listaProductos}) => {
-    return (
+    return(
         <>
         {/* Saco el h3 del div para poder alinear mis cards por debajo. */}
         <h3>Lista de productos</h3>
@@ -12,7 +12,6 @@ const ItemList = ({listaProductos}) => {
         {/* Mapeo mi array de objetos product con la id como clave. */}
         {listaProductos.map((product) => < Item product={product} key={product.id} />)}
         </div>
-        
         </>
     )
 }
