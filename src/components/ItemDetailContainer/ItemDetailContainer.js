@@ -4,7 +4,7 @@ import {Container, Row, Col} from "react-bootstrap"
 
 // Components
 import ItemDetail from "../ItemDetail/ItemDetail"
-import ItemList from "../ItemList/ItemList"
+// import ItemList from "../ItemList/ItemList"
 
 import {products} from "../../data/productos"
 

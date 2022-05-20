@@ -2,8 +2,6 @@
 import { useNavigate } from 'react-router-dom'
 // Componentes que importo de Bootstrap.
 import {Button, Card} from 'react-bootstrap'
-// Component
-// import ItemCount from '../ItemCount/ItemCount'
 
 // Componente funcional con item como parámetro.
 const Item = ({item}) => {
