@@ -1,7 +1,13 @@
-// Importo componentes.
-import Navbar from './components/Navbar/Navbar';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+// Importo router.
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+// Importo views.
+import Home from "./views/Home/Home"
+import Cart from "./views/Home/Home"
+import Products from "./views/Products/Products"
+import Category from "./views/Category/Category"
+import Product from "./views/Product/Product"
+
 
 // Css de Bootstrap.
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -10,11 +16,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   
   return (
-    <div>
-      <Navbar />
-      <ItemListContainer greeting={"¡Esperamos tu compra!"} />
-      <ItemDetailContainer />
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route exact path="*"element={<Home />} /> 
+      <Route exact path="/products"element={<Products />} />
+      <Route exact path="/product/:productId"element={<Product />} />
+      <Route exact path="/category/:categoryId"element={<Category />} />
+      <Route exact path="/cart"element={<Cart />} />
+    </Routes>
+    </BrowserRouter>
   );
 }
 

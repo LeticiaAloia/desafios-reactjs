@@ -1,26 +1,33 @@
-import axios from "axios"
 import React from "react"
+
+import {Container, Row, Col} from "react-bootstrap"
+
+// Components
 import ItemDetail from "../ItemDetail/ItemDetail"
+import ItemList from "../ItemList/ItemList"
+
+import {products} from "../../data/productos"
 
 
-export default function ItemDetailContainer (){
+export default function ItemDetailContainer ({name, productId}){
 
-    const [nuez, setNuez] = React.useState ([])
-
-    const getNuez = () => {
-        axios.get("https://apimocha.com/nuez/example")
-        .then(result => {
-            setNuez(result.data.results[1])
-            console.log(nuez.nombre)
-        })
-    }
+    const [item, setItem] = React.useState ({})
 
     React.useEffect( () => {
-        getNuez();
-    },[])
+        setItem(products.find(item => item.id === +productId))
+    },[productId])
 
     return(
-        <ItemDetail nuez={nuez} />
+        <Container>
+            <Row>
+                <Col>
+                <h1>{name}</h1>
+                </Col>
+            </Row>
+            <Row>
+                <ItemDetail item={item} />
+            </Row>
+        </Container>
     )
 }  
 

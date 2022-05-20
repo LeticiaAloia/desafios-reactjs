@@ -13,7 +13,7 @@
 /* Variables de color. */
 :root {
     --colorGeneral: rgb(245, 245, 245);
-    --verdeLogo: rgb(1, 29, 1);
+    --verdeLogo: rgb(65, 134, 65);
     --backParrafos: rgba(88, 88, 62, 0.651);
     --fondoTarjetas: rgb(83, 77, 43);
 }  

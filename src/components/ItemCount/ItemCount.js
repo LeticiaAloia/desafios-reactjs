@@ -1,18 +1,12 @@
 import React from "react"
 // Toastify.
 import {toast} from "react-toastify"
+// Bootstrap.
+import {Button} from "react-bootstrap"
 
 // Declaración del componente funcional.
 export default function Item () {
-    // Estilo del botón.
-    const addButtonStyles = {
-        backgroundColor: "var(--verdeLogo)",
-        color: "var(--colorParrafo)",
-        padding: "0.5rem 1rem",
-        fontFamily: "'Klee One', cursive",
-        fontSize: "1rem"
-    }
-    
+
     // Declaración del state hook.
     const [count, setCount] = React.useState(1)
     
@@ -52,24 +46,24 @@ export default function Item () {
     }
     // Componente de presentación.
     const AddButton = ({handleOnSubmit}) => {
-        return <button className="add-button" onClick={handleOnSubmit} style={addButtonStyles}>Añadir producto</button>;
+        return <button className="add-button" onClick={handleOnSubmit}>Añadir producto</button>;
         
     }
 
     // Return de la función.
     return (
-        <div className="add-button-container">
+        <div>
             {/* Aplico estilo. */}
-            <button style={addButtonStyles} >
+            <Button>
                 {/* Botón disminuir. */}
-                <StockButton text="-" handleOnClick={onDecrease} style={addButtonStyles} />
+                <StockButton text="-" handleOnClick={onDecrease} />
                 {/* Contador. */}
-                <span className="add-button-count" style={addButtonStyles}>{count}</span>
+                <span className="add-button-count">{count}</span>
                 {/* Botón aumentar. */}
-                <StockButton text="+" handleOnClick={onAdd} style={addButtonStyles} />
+                <StockButton text="+" handleOnClick={onAdd} />
                 {/* Botón agregar. */}
-                <AddButton style={addButtonStyles} handleOnSubmit={onSubmit} />
-            </button>
+                <AddButton handleOnSubmit={onSubmit} />
+            </Button>
             
         </div>
     );
