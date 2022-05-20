@@ -1,20 +1,25 @@
-import React from 'react'
+// Link
+import { useNavigate } from 'react-router-dom'
 // Componentes que importo de Bootstrap.
-import {Card, Button} from 'react-bootstrap'
+import {Button, Card} from 'react-bootstrap'
 
-// Componente funcional con product como parámetro.
-const Item = ({product}) => {
+
+// Componente funcional con item como parámetro.
+const Item = ({item}) => {
+
+    const navigate = useNavigate()
+    
 return(
     <div>
         {/* Card de Bootstrap. Inserto las propiedades de los objetos de mi array de productos como props.  */}
-        <Card style={{ width: '18rem', color:'black'}}>
-        <Card.Img variant="top" src={product.image} alt={product.name} />
+        <Card style={{ width: '18rem', color:'black'}} onClick={()=> navigate(`/product/${item.id}`)}>
+        <Card.Img variant="top" src={item.image} alt={item.name} />
         <Card.Body>
-            <Card.Title>{product.name}</Card.Title>
+            <Card.Title>{item.name}</Card.Title>
             <Card.Text>
-            ${product.price} por 250g
+            ${item.price}
             </Card.Text>
-        <Button style={{color:'black'}}>Ver más</Button>
+            <Button>Ver más</Button>
         </Card.Body>
         </Card>
     </div>

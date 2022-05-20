@@ -1,27 +1,33 @@
-import axios from "axios"
 import React from "react"
-import ItemDetail from "../ItemDetail/ItemDetail"
 
+import ItemDetail from "../ItemDetail/ItemDetail";
 
-export default function ItemDetailContainer (){
+import {products} from "../../data/productos";
 
-    const [nuez, setNuez] = React.useState ([])
+export default function ItemDetailContainer () {
+    let itemId = 3;
 
-    const getNuez = () => {
-        axios.get("https://apimocha.com/nuez/example")
-        .then(result => {
-            setNuez(result.data.results[1])
-            console.log(nuez.nombre)
-        })
+    const [selected, setSelected] = React.useState({});
+
+    const getItem = () => {
+        const promesa = new Promise((res, rej) => {
+            setTimeout (() => {
+                res(products.find((prod)=>prod.id === itemId));
+            }, 3000);
+        });
+        promesa.then((prod)=> {
+            setSelected(prod);
+        });
     }
-
-    React.useEffect( () => {
-        getNuez();
-    },[])
+    React.useEffect(()=>{
+        getItem()},[itemId])
 
     return(
-        <ItemDetail nuez={nuez} />
-    )
-}  
+        <ItemDetail prod={selected} />
+    )    
+    
+    
+};
+
 
 
