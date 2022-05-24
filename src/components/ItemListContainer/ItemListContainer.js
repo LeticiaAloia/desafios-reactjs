@@ -12,7 +12,7 @@ import {products} from "../../data/productos"
 export default function ItemListContainer ({name, categoryId}) {
 
     // Use state.
-    const [items, setItems] = React.useState([])
+    const [items, setItems] = React.useState([]);
     
 
     React.useEffect(()=> {
